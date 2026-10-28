@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official information website for PM Shri G.U.S.S.S. Tebban, Karsog, Mandi, Himachal Pradesh.">
+  <title>PM Shri G.U.S.S.S. Tebban | Learn • Grow • Achieve</title>
+  <style>
+    :root{--navy:#073a78;--blue:#0868d8;--pale:#eef6ff;--ink:#15345e;--muted:#5b6f8d;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none} .container{width:min(1180px,92%);margin:auto}
+    .topbar{background:var(--navy);color:white;font-size:.84rem;padding:8px 0}
+    .toprow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0a2d5510}
+    .navrow{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 0}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}.crest{height:70px;width:70px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#eaf4ff,#c9e1ff);border:3px solid #1d5da7;color:var(--navy);font-size:2rem;flex-shrink:0}
+    .brand h1{font-size:clamp(1.05rem,2vw,1.65rem);line-height:1.2;margin:0;color:var(--navy)}.brand p{margin:4px 0 0;font-weight:600;font-size:.9rem}
+    nav{display:flex;align-items:center;gap:6px}nav a{font-size:.9rem;font-weight:700;padding:10px 12px;border-radius:9px}nav a:hover,nav a.active{background:var(--navy);color:white}
+    .menu-toggle{display:none;border:0;background:var(--navy);color:white;border-radius:8px;padding:10px 13px;font-size:1.1rem}
+    .hero{min-height:360px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,38,79,.96) 0%,rgba(3,46,91,.83) 43%,rgba(3,46,91,.10) 100%),url('assets/school-hero.png') center 46%/cover no-repeat}
+    .hero-content{padding:64px 0;max-width:650px}.eyebrow{font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#a8d4ff;font-size:.8rem}
+    .hero h2{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.12;margin:10px 0 14px}.hero p{font-size:1.1rem;max-width:540px;margin:0 0 25px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:800;background:var(--blue);color:#fff;border:1px solid var(--blue);margin:0 8px 8px 0;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn.outline{background:transparent;border-color:white}
+    .features{padding:28px 0;background:#fff}.feature-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .feature{text-align:center;padding:15px 10px;border-right:1px solid #e6edf6}.feature:last-child{border:0}
+    .feature-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:#e3f0ff;font-size:1.65rem}
+    .feature h3{font-size:.94rem;margin:0 0 5px;color:#123c75}.feature p{font-size:.82rem;margin:0;color:var(--muted)}
+    section{scroll-margin-top:110px}.about{background:linear-gradient(120deg,#f4f9ff,#eaf4ff);padding:42px 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:28px;align-items:center}
+    .about-photo{width:100%;height:260px;object-fit:cover;object-position:center;border-radius:13px;box-shadow:0 10px 25px #103c6b20}
+    .section-tag{color:var(--blue);font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+    h2.section-title{margin:4px 0 12px;font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.2;color:var(--navy)}
+    .about-copy p{margin:0 0 16px;color:#425b7b}.btn.dark{background:var(--navy);border-color:var(--navy);font-size:.9rem;padding:10px 16px}
+    .highlights{background:#e0efff;padding:22px;border-radius:14px}.highlights h3{margin:0 0 15px;color:var(--navy)}
+    .highlight{display:flex;gap:12px;margin:13px 0;align-items:flex-start}.highlight span{font-size:1.35rem}.highlight strong{display:block}.highlight small{color:#4d6484}
+    .notices{padding:38px 0 44px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.section-head h2{margin:0;color:var(--navy);font-size:1.65rem}.section-head a{font-weight:800;color:var(--blue);white-space:nowrap}
+    .notice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.notice{border:1px solid #e1eaf5;border-radius:12px;padding:17px;box-shadow:0 5px 16px #133d6a08;display:flex;gap:12px}
+    .date{min-width:48px;height:54px;border-radius:8px;background:#0871e5;color:white;text-align:center;padding:5px 2px;font-weight:800;line-height:1.15}.date small{font-size:.72rem;display:block;font-weight:600;margin-top:3px}
+    .notice h3{font-size:.96rem;margin:0 0 5px;color:var(--navy)}.notice p{font-size:.82rem;color:var(--muted);margin:0 0 8px}.notice a{font-size:.82rem;color:var(--blue);font-weight:800}
+    .contact{padding:40px 0;background:#f2f7fd}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.contact-card{background:white;border:1px solid #e3edf8;padding:24px;border-radius:14px}.contact-card h2{margin:0 0 12px;color:var(--navy)}
+    .contact-card p{margin:8px 0;color:#435b7a}.contact-card a{color:var(--blue);font-weight:700}
+    footer{background:#062d5d;color:white;padding:25px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-row h2{font-size:1.1rem;margin:0}.footer-row p{margin:4px 0;font-size:.86rem;color:#d8e8fb}.quote{text-align:center;font-style:italic;max-width:360px}.copyright{border-top:1px solid #ffffff2a;margin-top:18px;padding-top:14px;font-size:.78rem;color:#c8dcf5;text-align:center}
+    @media(max-width:980px){.navrow{flex-wrap:wrap}.menu-toggle{display:block}nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-top:8px}nav.open{display:flex}nav a{padding:11px 13px}.feature-grid{grid-template-columns:repeat(3,1fr)}.feature:nth-child(3){border-right:0}.about-grid{grid-template-columns:1fr 1fr}.highlights{grid-column:1/-1}.notice-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.toprow{justify-content:center;text-align:center}.toprow span:nth-child(2){display:none}.navrow{gap:12px;padding:12px 0}.crest{width:54px;height:54px;font-size:1.6rem}.brand{gap:10px;flex:1}.brand p{font-size:.78rem}.hero{min-height:420px;background-position:60% center}.hero-content{padding:48px 0}.hero p{font-size:1rem}.feature-grid{grid-template-columns:repeat(2,1fr)}.feature{border-right:0;border-bottom:1px solid #e6edf6}.feature:nth-last-child(-n+2){border-bottom:0}.about-grid{grid-template-columns:1fr}.about-photo{height:220px}.highlights{grid-column:auto}.notice-grid{grid-template-columns:1fr}.section-head h2{font-size:1.35rem}.contact-grid{grid-template-columns:1fr}.footer-row{justify-content:center;text-align:center}.quote{order:3}.footer-row>div{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container toprow"><span>📍 Tebban, Karsog, Mandi (H.P.) 175022</span><span>✉️ School office contact: please confirm details</span><span>🏫 Learn • Grow • Achieve</span></div></div>
+  <header><div class="container navrow">
+    <a class="brand" href="#home" aria-label="PM Shri G.U.S.S.S. Tebban home"><div class="crest" aria-hidden="true">📚</div><div><h1>PM Shri G.U.S.S.S. Tebban</h1><p>Government Senior Secondary School</p></div></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" id="menuToggle">☰ Menu</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#academics">Academics</a><a href="#facilities">Facilities</a><a href="#notices">Notices</a><a href="#contact">Contact</a>
+    </nav>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="container"><div class="hero-content">
+      <div class="eyebrow">Welcome to our school</div><h2>PM Shri G.U.S.S.S. Tebban</h2>
+      <p>Building bright futures through quality education, discipline and values.</p>
+      <a class="btn" href="#about">Explore Our School&nbsp; →</a><a class="btn outline" href="#contact">Contact Us</a>
+    </div></div></section>
+    <section class="features" id="facilities"><div class="container feature-grid">
+      <article class="feature"><div class="feature-icon">🎓</div><h3>Quality Education</h3><p>Helping students learn and grow</p></article>
+      <article class="feature"><div class="feature-icon" style="background:#d9f7e9">👩‍🏫</div><h3>Dedicated Teachers</h3><p>Guidance and support for learners</p></article>
+      <article class="feature"><div class="feature-icon" style="background:#eae2ff">📖</div><h3>Learning Resources</h3><p>Encouraging curiosity and reading</p></article>
+      <article class="feature"><div class="feature-icon" style="background:#ffebc9">🏆</div><h3>Holistic Development</h3><p>Academics, sports and culture</p></article>
+      <article class="feature"><div class="feature-icon" style="background:#d8f7f7">🤝</div><h3>Safe Environment</h3><p>Respect and care for everyone</p></article>
+      <article class="feature"><div class="feature-icon" style="background:#ffe0ed">🌱</div><h3>Strong Values</h3><p>Discipline and responsibility</p></article>
+    </div></section>
+    <section class="about" id="about"><div class="container about-grid">
+      <img class="about-photo" src="assets/school-hero.png" alt="School building and green mountain landscape">
+      <div class="about-copy"><div class="section-tag">About our school</div><h2 class="section-title">Learning today, leading tomorrow</h2>
+        <p>PM Shri G.U.S.S.S. Tebban is a government senior secondary school in Tebban, Karsog, District Mandi, Himachal Pradesh. This website is a place for families and students to find school information, updates and learning resources.</p>
+        <p>We aim to support academic growth, creativity, responsible citizenship and a welcoming school community.</p>
+        <a class="btn dark" href="#contact">Get in Touch →</a>
+      </div>
+      <aside class="highlights" id="academics"><h3>School Information</h3>
+        <div class="highlight"><span>📍</span><div><strong>Location</strong><small>Tebban, Karsog, Mandi (H.P.) 175022</small></div></div>
+        <div class="highlight"><span>📘</span><div><strong>Academic information</strong><small>Please contact the school office for current classes, subjects and timings.</small></div></div>
+        <div class="highlight"><span>🏫</span><div><strong>School type</strong><small>Government Senior Secondary School</small></div></div>
+      </aside>
+    </div></section>
+    <section class="notices" id="notices"><div class="container">
+      <div class="section-head"><h2>📣 Latest News &amp; Notices</h2><a href="#contact">School updates ↓</a></div>
+      <div class="notice-grid">
+        <article class="notice"><div class="date">INFO<small>NOTICE</small></div><div><h3>School Announcements</h3><p>Check with the school office for the latest announcements and event dates.</p><a href="#contact">Contact office →</a></div></article>
+        <article class="notice"><div class="date" style="background:#159765">INFO<small>STUDY</small></div><div><h3>Academic Updates</h3><p>Students and parents can confirm exam schedules and academic updates with staff.</p><a href="#contact">Ask a question →</a></div></article>
+        <article class="notice"><div class="date" style="background:#7756d8">INFO<small>EVENT</small></div><div><h3>School Activities</h3><p>Follow official school communications for sports, cultural and other activities.</p><a href="#contact">Learn more →</a></div></article>
+        <article class="notice"><div class="date" style="background:#e98a00">INFO<small>HELP</small></div><div><h3>Parent Enquiries</h3><p>Contact the school office to verify dates, admissions and required documents.</p><a href="#contact">Get in touch →</a></div></article>
+      </div>
+    </div></section>
+    <section class="contact" id="contact"><div class="container contact-grid">
+      <div><div class="section-tag">Contact</div><h2 class="section-title">We’re here to help</h2><p>For admissions, school timings, official notices or other enquiries, please contact the school office using verified contact details.</p></div>
+      <div class="contact-card"><h2>PM Shri G.U.S.S.S. Tebban</h2><p>📍 Tebban, Karsog, District Mandi, Himachal Pradesh 175022</p><p>👩‍💼 Principal: Mrs. Ranu Lata <em>(please verify current details)</em></p><p>✉️ Email and phone: add the school's verified contact details here.</p><a href="#home">Back to top ↑</a></div>
+    </div></section>
+  </main>
+  <footer><div class="container"><div class="footer-row">
+    <div><h2>PM Shri G.U.S.S.S. Tebban</h2><p>Government Senior Secondary School</p><p>Tebban, Karsog, Mandi (H.P.) 175022</p></div>
+    <div class="quote">“Education is the key to a brighter future.”<p>Learn • Grow • Achieve</p></div>
+    <div><a href="#home">Home</a> &nbsp;|&nbsp; <a href="#about">About</a> &nbsp;|&nbsp; <a href="#contact">Contact</a></div>
+  </div><div class="copyright">© <span id="year"></span> PM Shri G.U.S.S.S. Tebban. School information should be verified with official sources.</div></div></footer>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
